@@ -1,0 +1,9 @@
+cat = prompt("How many cats do you have?")
+function sayHello(name)
+    print("Hello", name)
+sayHello("Kyle")
+if cat == 1
+    print("You have one cat")
+else
+    print("You have multiple cats")
+print("Ok goodbye")

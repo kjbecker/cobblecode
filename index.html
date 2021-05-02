@@ -1,0 +1,120 @@
+<link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-2.27.0.min.css" />
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.4.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<style>
+    #editor {
+        position: relative;
+        width: 800px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .editor-sized{
+        position: relative;
+        width: 800px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-y: scroll;
+    }
+
+    .p-list li{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .sel{color: navy;
+    background-color: lightblue;
+    text-decoration: none;
+    }
+</style>
+
+
+    <div class="row">
+        <div class="col-12">
+            <h1>CobbleCode - Programming for everyone</h1>
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="row">
+        <div class="col-10">
+            <button id="run" class="p-button--positive">Run</button>
+        </div>
+        <div class="col-1"> 
+            <button id="showModal" aria-controls="modal">Tutorial</button>
+
+        </div>
+        <div class="col-1">
+            <select name="lang" id="lang">
+                <option value="en">en</option>
+                <option value="fr">fr</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="p-modal" id="modal" style="display: none">
+        <section class="p-modal__dialog" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-description">
+            <header class="p-modal__header">
+            <h2 class="p-modal__title" id="modal-title">Tutorial</h2>
+            <button class="p-modal__close" aria-label="Close active modal" aria-controls="modal" id="closeModal">Close</button>
+            </header>
+            <div class="row">
+                <div class="col-3">
+                    <ul class="p-list">
+                        <li id="sel-1" class="p-list__item sel">Hello World</li>
+                        <li id="sel-2" class="p-list__item">Variables and Prompts</li>
+                        <li id="sel-3" class="p-list__item">If / Else</li>
+                        <li id="sel-4" class="p-list__item">Booleans</li>
+                        <li id="sel-5" class="p-list__item">Arrays</li>
+                        <li id="sel-6" class="p-list__item">Loops</li>
+                        <li id="sel-7" class="p-list__item">Functions</li>
+                        
+                      </ul>
+                </div>
+                <div class="col-9">
+                    <h2 id="tut-title"></h2>
+                    <div id=tut-cont></div>
+                    <button id="tryit">Try It</button>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+    <hr>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="editor"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="editor-sized" id="console">
+
+            </div>
+        </div>
+    </div>
+
+
+
+<!--<script src="src/ace.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://pagecdn.io/lib/ace/1.4.12/ace.js" crossorigin="anonymous" integrity="sha256-Q9hnBpgBFstzZOr+OKFOWZWfcF5nFXO8Qz48Nmndo6U=" ></script>
+
+
+<script src="webjs.mjs" type="module"></script>
